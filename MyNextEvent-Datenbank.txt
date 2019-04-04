@@ -1,0 +1,49 @@
+CREATE DATABASE MyNextEvent;
+
+CREATE TABLE geschlecht (
+	PK_Geschlecht_ID int NOT NULL PRIMARY KEY, 
+	Geschlecht VARCHAR(255)
+);
+
+INSERT INTO geschlecht (PK_Geschlecht_ID, Geschlecht) VALUES ("1", "maenlich");
+INSERT INTO geschlecht (PK_Geschlecht_ID, Geschlecht) VALUES ("2", "weiblich");
+
+
+CREATE TABLE rechte (
+	PK_Rechte_ID int NOT NULL PRIMARY KEY, 
+	Rechte VARCHAR(255)
+);
+
+INSERT INTO rechte (PK_Rechte_ID, Rechte) VALUES ("1", "Darf im Backend");
+INSERT INTO rechte (PK_Rechte_ID, Rechte) VALUES ("2", "Darf nicht im Backend");
+
+
+CREATE TABLE benutzer (
+	PK_Benutzer_ID int AUTO_INCREMENT NOT NULL PRIMARY KEY, 
+	Benutzername VARCHAR(255), 
+	Passwort VARCHAR(255), 
+	Geburtsdatum DATE, 
+	FK_Geschlecht_ID int, FOREIGN KEY (FK_Geschlecht_ID) REFERENCES geschlecht(PK_Geschlecht_ID), 
+	FK_Rechte_ID int, FOREIGN KEY (FK_Rechte_ID) REFERENCES rechte(PK_Rechte_ID)
+);
+
+INSERT INTO benutzer (Benutzername, Passwort, Geburtsdatum, FK_Geschlecht_ID, FK_Rechte_ID) VALUES ("DarkoDjolev", "djolev123", "2000-08-23", "1", "1");
+INSERT INTO benutzer (Benutzername, Passwort, Geburtsdatum, FK_Geschlecht_ID, FK_Rechte_ID) VALUES ("MarioPfaffeneder", "pfaffeneder123", "2002-05-27", "1", "1");
+INSERT INTO benutzer (Benutzername, Passwort, Geburtsdatum, FK_Geschlecht_ID, FK_Rechte_ID) VALUES ("NicolasBachschwell", "bachschwell123", "2001-01-27", "1", "1");
+INSERT INTO benutzer (Benutzername, Passwort, Geburtsdatum, FK_Geschlecht_ID, FK_Rechte_ID) VALUES ("MilosAdamovic", "adamovic123", "2001-07-10", "1", "1");
+INSERT INTO benutzer (Benutzername, Passwort, Geburtsdatum, FK_Geschlecht_ID, FK_Rechte_ID) VALUES ("BenjaminMerdzanovic", "merdzanovic123", "2001-04-02", "1", "1");
+
+
+CREATE TABLE ort (
+	PK_Ort_ID int AUTO_INCREMENT NOT NULL PRIMARY KEY, 
+	Name VARCHAR(255)
+);
+
+CREATE TABLE events (
+	PK_Event_ID int AUTO_INCREMENT NOT NULL PRIMARY KEY, 
+	Titel VARCHAR(255), 
+	Beschreibung VARCHAR(1500), 
+	Bild VARCHAR(255), 
+	FK_Ort_ID int, FOREIGN KEY (FK_Ort_ID) REFERENCES ort(PK_Ort_ID), 
+	FK_Benutzer_ID int, FOREIGN KEY (FK_Benutzer_ID) REFERENCES benutzer(PK_Benutzer_ID)
+);
