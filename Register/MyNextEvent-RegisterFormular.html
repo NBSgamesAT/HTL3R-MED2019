@@ -11,58 +11,30 @@
 
 	<h1>Anmeldeformular</h1>
 	<fieldset>
-		<legend>persönliche Daten</legend>
+		<legend>Persönliche Daten</legend>
 	<form action='Formular.php' method='POST'>
-			Titel: <select name="titel" size="1" >
-			<option value="ohne"> </option>
-			<option value="doc">Doktor </option>
-			<option value="mag">Magister </option>
-			<option value="dipl">Diplom Ingenieur</option>
-			</select>
+
+			Vorname*: <input type="text" name="vorname" required/>
 			</br>
 			</br>
-			Vorname*: <input type="text" name="vorname" />
+			Nachname*: <input type="text" name="nachname" required/>
 			</br>
 			</br>
-			Nachname*: <input type="text" name="nachname" />
-			</br>
-			</br>
-			Geschlecht*: <input type="radio" name="gender" value="Mann">Männlich
-			<input type="radio" name="gender" value="Frau">Weiblich
-			</br>
-			</br>
-			PLZ: <input type="text" name="plz" />
+			Geschlecht*: <input type="radio" name="gender" value="1" checked>Männlich
+			<input type="radio" name="gender" value="2" required>Weiblich <input type="radio" name="gender" value="3" > Kampfhelikopter
 			</br>
 			</br>
 			Ort: <input type="text" name="ort" />
 			</br>
 			</br>
-			Straße: <input type="text" name="straße" />
-			</br>
-			</br>
-			Tel.Nr: <input type="text" name="tel" />
-			</br>
-			</br>
-			Geburtsdatum*: <input type="text" name="Tag" /> - <input type="text" name="Monat" /> - <input type="text" name="Jahr" /> Tag-Monat-Jahr
-			</br>
-			</br>
-			Besondere Anmerkung <textarea name="besondere" rows="3" cols="15"> </textarea>
+			
+			Geburtsdatum*: <input type="date" name="geburtsdatum" required/>
 			</br>
 			</br>
 			<p>*Pflichtfelder, müssen ausgefüllt werden</p>
 	</fieldset>
-	<fieldset>
-		<legend>Sprachen</legend>
-		<input type="checkbox"  name="englisch"> Englisch
-		</br>
-		<input type="checkbox"  name="deutsch"> Deutsch
-		</br>
-		<input type="checkbox"  name="franzoesisch"> Französisch
-	</fieldset>
-		<input type="reset"   name="zurück" value="Zurücksetzen">
-		<input type="submit" name="ab" value="Absenden">
 	</form>
 
-
+	
 </body>
 </html>
