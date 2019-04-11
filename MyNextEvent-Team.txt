@@ -1,0 +1,8 @@
+Projektname: MyNextEvent
+
+Team:
+ - Darko Djolev
+ - Mario Pfaffeneder
+ - Benjamin Merdzanovic
+ - Milos Adamovic
+ - Nicolas Bachschwell
