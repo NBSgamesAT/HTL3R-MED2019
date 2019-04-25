@@ -3,89 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Kalendar</title>
-    <style>
-      * {box-sizing: border-box;}
-          ul {list-style-type: none;}
-          body {font-family: Verdana, sans-serif;}
-
-          .month {
-          padding: 70px 25px;
-          width: 100%;
-          background: #f2afb9;
-          text-align: center;
-          }
-
-          .month ul {
-          margin: 0;
-          padding: 0;
-          }
-
-          .month ul li {
-          color: white;
-          font-size: 20px;
-          text-transform: uppercase;
-          letter-spacing: 3px;
-          }
-
-          .month .prev {
-          float: left;
-          padding-top: 10px;
-          }
-
-          .month .next {
-          float: right;
-          padding-top: 10px;
-          }
-
-          .weekdays {
-          margin: 0;
-          padding: 10px 0;
-          background-color: #ddd;
-          }
-
-          .weekdays li {
-          display: inline-block;
-          width: 13.6%;
-          color: #666;
-          text-align: center;
-          }
-
-          .days {
-          padding: 10px 0;
-          background: #eee;
-          margin: 0;
-          }
-
-          .days li {
-          list-style-type: none;
-          display: inline-block;
-          width: 13.6%;
-          text-align: center;
-          margin-bottom: 5px;
-          font-size:12px;
-          color: #777;
-          }
-
-          .days li .active {
-          padding: 5px;
-          background: #f2afb9;
-          color: white !important
-          }
-
-          /* Add media queries for smaller screens */
-          @media screen and (max-width:720px) {
-          .weekdays li, .days li {width: 13.1%;}
-          }
-
-          @media screen and (max-width: 420px) {
-          .weekdays li, .days li {width: 12.5%;}
-          .days li .active {padding: 2px;}
-          }
-
-          @media screen and (max-width: 290px) {
-          .weekdays li, .days li {width: 12.2%;}
-          }
-    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/responsive.css" rel="stylesheet">
   </head>
   <body>
     <h1>CSS Calendar</h1>
@@ -144,5 +64,9 @@
         <li>30</li>
         <li>31</li>
       </ul>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>	
+      <script src="/javascript/main.js"></script>
   </body>
 </html>
