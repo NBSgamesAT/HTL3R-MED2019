@@ -1,6 +1,12 @@
 <?php
+$SHOW_ERROR = false;
 if(isset($_POST["submit"]) && $_POST["submit"] === "LOGIN"){
-  //ACH FUCK! BIN FAUL NICHTS ZU COMMITEN!
+  if(isset($_POST["email"]) && $_POST["email"] != "" && isset($_POST["password"]) && $_POST["password"] != ""){
+    //I guess Im waiting for more stuff.
+  }
+  else{
+    $SHOW_ERROR = true;
+  }
 }
 
 ?>
@@ -18,9 +24,14 @@ if(isset($_POST["submit"]) && $_POST["submit"] === "LOGIN"){
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-3">
+          <?php
+            if($SHOW_ERROR){
+              echo "<p>YOU MUST TYPE IN YOUR USERNAME AND PASSWORD</p>";
+            }
+          ?>
           <form method="POST">
-            <input name="email" placeholder="Email or Username" type="text">
-            <input name="password" placeholder="Passwort" type="password">
+            <input name="email" placeholder="Email or Username" type="text"><br>
+            <input name="password" placeholder="Passwort" type="password"><br>
             <input name="submit" type="Submit" value="LOGIN">
           </form>
         </div>
