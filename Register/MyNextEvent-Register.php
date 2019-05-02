@@ -28,6 +28,12 @@
 					echo "Nachname: " .$_POST['nachname'];
 				}
 				echo "</br>";
+				if (null == ($_POST['password']) ) {
+					echo "Password: Pflichtfeld nicht eingegeben!";
+				} else {
+					echo "Password: " .$_POST['password'];
+				}
+				echo "</br>";
 				if (isset($_POST['gender'])) {
 					if ($_POST['gender'] == 'Mann') {
 						echo "Geschlecht: ".$_POST['gender'];
