@@ -2,7 +2,7 @@
 $SHOW_ERROR = false;
 if(isset($_POST["submit"]) && $_POST["submit"] === "LOGIN"){
   if(isset($_POST["email"]) && $_POST["email"] != "" && isset($_POST["password"]) && $_POST["password"] != ""){
-    //I guess Im waiting for more stuff.
+    
   }
   else{
     $SHOW_ERROR = true;

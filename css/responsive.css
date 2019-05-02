@@ -1,14 +1,56 @@
 /* Add media queries for smaller screens */
 @media screen and (max-width:720px) {
   .weekdays li, .days li {width: 13.1%;}
-  }
-  
-  @media screen and (max-width: 420px) {
+}
+
+@media screen and (max-width: 420px) {
   .weekdays li, .days li {width: 12.5%;}
   .days li .active {padding: 2px;}
-  }
-  
-  @media screen and (max-width: 290px) {
+}
+
+@media screen and (max-width: 290px) {
   .weekdays li, .days li {width: 12.2%;}
-  }
+}
+
+div#hero{
+  height: 90%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('Heroimage.jpg');
+}
   
+/* BOOTSTRAP 4 GRIDDING */
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  div#hero{
+    background-attachment: scroll;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  div#hero{
+    background-attachment: scroll;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  div#hero{
+    background-attachment: scroll;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  div#hero{
+    background-attachment: fixed;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  div#hero{
+    background-attachment: fixed;
+  }
+}

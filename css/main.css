@@ -1,6 +1,7 @@
 * {box-sizing: border-box;}
 ul {list-style-type: none;}
-body {font-family: Verdana, sans-serif;}
+html {height: 100%;}
+body {font-family: Verdana, sans-serif;height: 100%;}
 
 .month {
 padding: 70px 25px;
@@ -65,3 +66,4 @@ padding: 5px;
 background: #f2afb9;
 color: white !important
 }
+
