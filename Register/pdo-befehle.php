@@ -3,10 +3,10 @@
 <body>
 <?php
 
-if(isset($_POST["vorname"]) && isset($_POST["nachname"]) && isset($_POST["passwort"]) && isset($_POST["gender"]) && isset($_POST["geburtsdatum"]) ){
+if(isset($_POST["vorname"]) && isset($_POST["nachname"]) && isset($_POST["password"]) && isset($_POST["gender"]) && isset($_POST["geburtsdatum"]) ){
     
     $user = $_POST["vorname"] . " " . $_POST["nachname"];
-    $pw = $_POST["passwort"];
+    $pw = $_POST["password"];
     $geb = $_POST["geburtsdatum"];
     $geschlecht = $_POST["gender"];
     $ort = $_POST["ort"];
