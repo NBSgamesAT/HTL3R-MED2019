@@ -10,43 +10,26 @@
     <link href="/css/main.css" rel="stylesheet">
     <link href="/css/responsive.css" rel="stylesheet">
     <style>
-
-    html {height: 100%;}
-    body {height: 100%;}
-    #heroDiv{
-      height: 90%;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-image: url('Heroimage.jpg');
-    }
     /*  Rosa: f2afb9
         Grau: e3d7d7
     */
-	#content	{
-      position: absolute;
-		  left: 25px;
-      top: 200px;
-			width: 97%;
-      font-size: 25pt;
-		}
-  #header button {
-      position: absolute;
-      right: 0px;
-      top: 0px;
-      width: 75px;
-      height: 30px;
-    }
-  #inhalt	{
-      background-color: #FFF;
-		}
-
 		</style>
   </head>
   <body>
-    <div id="heroDiv">
-      <div id=""> MyNextEvent <button type="button" name="button">Login</button> </div>
-      <div id="">milos</div>
+    <div id="navbar" class="container-fluid">
+      <div class="row">
+        <div class="col-sm-auto">
+        </div>
+        <div class="col-sm">
+          <ul style="width: 100%;">
+            <li style="display: block;float: right;"><a class="inbar" href="/login" style="float: right;">Login</a></li>
+          </ul>
+        </div>  
+      </div>
+    </div>
+    </div>
+    <div id="hero">
+      
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

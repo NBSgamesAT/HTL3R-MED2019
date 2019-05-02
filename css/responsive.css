@@ -16,7 +16,7 @@ div#hero{
   height: 90%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url('Heroimage.jpg');
+  background-image: url('/imgs/Heroimage.jpg');
 }
   
 /* BOOTSTRAP 4 GRIDDING */

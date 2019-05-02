@@ -67,3 +67,21 @@ background: #f2afb9;
 color: white !important
 }
 
+#navbar {
+  position: fixed;
+  background-color: #e3d7d7;
+  height: 50px;
+}
+.inbar {
+  font-size: 20pt;
+  height: 50px;
+  transition: 0.2s;
+  text-decoration: none;
+  padding: 5px;
+  color: #000;
+}
+.inbar:hover {
+  background-color: #f2afb9;
+  text-decoration: none;
+  color: #000;
+}
