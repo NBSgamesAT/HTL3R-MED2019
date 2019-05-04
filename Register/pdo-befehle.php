@@ -11,7 +11,7 @@ if(isset($_POST["vorname"]) && isset($_POST["nachname"]) && isset($_POST["passwo
     $geschlecht = $_POST["gender"];
     $ort = $_POST["ort"];
     
-    $db = new PDO("mysql: host=nbsgames.at; dbname=MyNextEvent", "BF", "bachschwellfamily");
+    $db = new PDO("mysql:host=nbsgames.at;dbname=MyNextEvent", "BF", "bachschwellfamily");
     $state = "INSERT INTO benutzer(Benutzername,Passwort,Geburtsdatum,FK_Geschlecht_ID,FK_Rechte_ID) 
     VALUES (:user, :password, :geb, :geschlecht, 2)";
     $execute = $db->prepare($state);
