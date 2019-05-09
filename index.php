@@ -31,9 +31,9 @@
     <div id="hero">
       
     </div>
-    <div class="container-fluid" stlye="margin-top: 25px;text-align: center;">
+    <div class="container-fluid" style="margin-top: 25px;">
       <div class="row">
-        <div class="col-lg-2 col-md-3">
+        <div class="col-xl-2 col-lg-3 col-md-4">
           <iframe src="/Kalender/prod.php"></iframe>
         </div>
       </div>
