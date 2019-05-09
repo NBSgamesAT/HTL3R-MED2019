@@ -44,3 +44,12 @@ td.today {
   text-decoration: none;
   color: #000;
 }
+
+iframe {
+  display: block;
+  width: 203px;
+  overflow: hidden;
+  height: 220px;
+  border: none;
+  
+}
