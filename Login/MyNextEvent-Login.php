@@ -6,7 +6,7 @@ if(isset($_POST["submit"]) && $_POST["submit"] === "LOGIN"){
     $passwort = $_POST["passwort"];
                 
     $pdo = new PDO("mysql:host=nbsgames.at;dbname=MyNextEvent", "BF", "bachschwellfamily");
-    $sql = "SELECT * FROM users WHERE Benutzername = :benutzername AND Passwort = :passwort;";
+    $sql = "SELECT * FROM benutzer WHERE Benutzername = :benutzername AND Passwort = :passwort;";
     $statement = $pdo->prepare($sql);
     $statement->bindParam(":benutzername", $benutzername);
     $statement->bindParam(":passwort", $passwort);
