@@ -1,10 +1,17 @@
+@charset "UTF-8";
+
+/*  
+    Rosa: f2afb9;
+    Grau: e3d7d7;
+*/
+
 * {box-sizing: border-box;}
 ul {list-style-type: none;}
 html {height: 100%;}
 body {font-family: Verdana, sans-serif;height: 100%;}
 
 td.calender {
-  width: 29px;
+  width: 35px;
   text-align: center;
   border: 1px solid #000;
 }
@@ -14,6 +21,7 @@ td.num {
   border: 1px solid #000;
   text-align: center;
   transition: 0.2s;
+  width: 35px;
 }
 td.num:hover {
   background-color: #bbb;
@@ -22,9 +30,8 @@ td.today {
   background-color: #f2afb9;
   border: 1px solid #000;
   text-align: center;
-  transition: 0.2s;
+  width: 35px;
 }
-
 
 #navbar {
   position: fixed;
@@ -48,7 +55,7 @@ td.today {
 iframe {
   display: block;
   margin: 0px auto;
-  width: 203px;
+  width: 245px;
   overflow: hidden;
   height: 220px;
   border: none;

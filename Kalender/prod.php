@@ -33,7 +33,7 @@
       }
 
     ?>
-    <table style="width:203px;background-color: #eee;border: 1px solid #000;">
+    <table style="width:245px;background-color: #eee;border: 1px solid #000;">
     <tr style="color:#FFFFFF;background-color:#f2afb9;text-align: center;">
       <td class="calender"><a href="<?php echo $_SERVER["PHP_SELF"] . "?month=". $prev_month . "&year=" . $prev_year; ?>" style="color:#FFFFFF"><</a></td>
       <td colspan="5"><strong><?php echo $monthNames[$cMonth-1].' '.$cYear; ?></strong></td>

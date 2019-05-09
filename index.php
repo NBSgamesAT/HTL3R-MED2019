@@ -9,11 +9,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="/css/main.css" rel="stylesheet">
     <link href="/css/responsive.css" rel="stylesheet">
-    <style>
-    /*  Rosa: f2afb9
-        Grau: e3d7d7
-    */
-		</style>
   </head>
   <body>
     <div id="navbar" class="container-fluid">
@@ -33,7 +28,7 @@
     </div>
     <div class="container-fluid" style="margin-top: 25px;">
       <div class="row">
-        <div class="col-xl-2 col-lg-3 col-md-4">
+        <div class="col-md-5 col-lg-4 col-xl-3">
           <iframe src="/Kalender/prod.php"></iframe>
         </div>
       </div>
