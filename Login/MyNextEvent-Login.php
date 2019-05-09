@@ -19,8 +19,6 @@ if(isset($_POST["submit"]) && $_POST["submit"] === "LOGIN"){
       } else {
         $_SESSION["logged_in"] = false;
         echo "<p>Die Zugangsdaten sind falsch!<p/>";
-        echo "<img src=\"https://media.giphy.com/media/6Q2KA5ly49368/giphy.gif\"<br/>";
-        echo "<p><a href='login-form.php'>Nochmal versuchen</a></p>";
       }
     } 
   }
