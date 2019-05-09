@@ -33,48 +33,55 @@
       }
 
     ?>
-    <table width="200" bgcolor="#eee">
-    <tr align="center">
-    <td bgcolor="#f2afb9" style="color:#FFFFFF">
-    <table width="100%" border="0" cellspacing="0" cellpadding="0">
-
-    </table>
-    </td>
+    <table style="width:203px;background-color: #eee;border: 1px solid #000;">
+    <tr style="color:#FFFFFF;background-color:#f2afb9;text-align: center;">
+      <td class="calender"><a href="<?php echo $_SERVER["PHP_SELF"] . "?month=". $prev_month . "&year=" . $prev_year; ?>" style="color:#FFFFFF"><</a></td>
+      <td colspan="5"><strong><?php echo $monthNames[$cMonth-1].' '.$cYear; ?></strong></td>
+      <td class="calender"><a href="<?php echo $_SERVER["PHP_SELF"] . "?month=". $next_month . "&year=" . $next_year; ?>" style="color:#FFFFFF">></a></td>
     </tr>
-    <tr>
-    <td align="center">
-    <table width="100%" border="2" cellpadding="2" cellspacing="2">
-    <tr align="center">
-      <td width="50%" align="left" bgcolor="#f2afb9"><a href="<?php echo $_SERVER["PHP_SELF"] . "?month=". $prev_month . "&year=" . $prev_year; ?>" style="color:#FFFFFF"> < </a></td>
-      <td colspan="7" bgcolor="#f2afb9" style="color:#FFFFFF"><strong><?php echo $monthNames[$cMonth-1].' '.$cYear; ?></strong></td>
-      <td width="50%" align="right" bgcolor="#f2afb9"><a href="<?php echo $_SERVER["PHP_SELF"] . "?month=". $next_month . "&year=" . $next_year; ?>" style="color:#FFFFFF"> > </a>  </td>
-
-    </tr>
-    <tr>
-    <td align="center" bgcolor="#ddd" style="color:#888888"><strong>Montag</strong></td>
-    <td align="center" bgcolor="#ddd" style="color:#888888"><strong>Dienstag</strong></td>
-    <td align="center" bgcolor="#ddd" style="color:#888888"><strong>Mittwoch</strong></td>
-    <td align="center" bgcolor="#ddd" style="color:#888888"><strong>Donnerstag</strong></td>
-    <td align="center" bgcolor="#ddd" style="color:#888888"><strong>Freitag</strong></td>
-    <td align="center" bgcolor="#ddd" style="color:#888888"><strong>Samstag</strong></td>
-    <td align="center" bgcolor="#ddd" style="color:#888888"><strong>Sonntag</strong></td>
+    <tr style="background-color:#888;">
+      <td class="calender" style="color:#fff"><strong>Mo</strong></td>
+      <td class="calender" style="color:#fff"><strong>Di</strong></td>
+      <td class="calender" style="color:#fff"><strong>Mi</strong></td>
+      <td class="calender" style="color:#fff"><strong>Do</strong></td>
+      <td class="calender" style="color:#fff"><strong>Fr</strong></td>
+      <td class="calender" style="color:#fff"><strong>Sa</strong></td>
+      <td class="calender" style="color:#fff"><strong>So</strong></td>
     </tr>
     <?php
     $timestamp = mktime(0,0,0,$cMonth,1,$cYear);
     $maxday = date("t",$timestamp);
     $thismonth = getdate ($timestamp);
-    $startday = $thismonth['wday'];
+    $startday = $thismonth['wday'] - 1;
+    $skipper = 0;
+    $show = false;
+    if($cMonth == date("m", time()) && $cYear == date("Y", time())){
+      $show = true;
+    }
+
     for ($i=0; $i<($maxday+$startday); $i++) {
         if(($i % 7) == 0 ) echo "<tr>";
-        if($i < $startday) echo "<td></td>";
-        else echo "<td align='center' valign='middle' height='20px'>". ($i - $startday + 1) . "</td>";
+        if($i < $startday){
+          ++$skipper;
+          echo "<td class=\"calender\"></td>";
+        }
+        else if($show && date("d", time()) == ($i - $startday + 1)){
+          echo "<td class=\"today\">". ($i - $startday + 1) . "</td>";
+        }
+        else echo "<td class=\"num\">". ($i - $startday + 1) . "</td>";
         if(($i % 7) == 6 ) echo "</tr>";
     }
+    $filler = 7 - ($maxday % 7 + $skipper);
+    
+    for ($i=0; $i<$filler; $i++) {
+      echo "<td class=\"calender\"></td>";
+      if($i == ($filler-1)){
+        echo "<tr>";
+      }
+    }
     ?>
-  </table>
-  </td>
-  </tr>
-  </table>
+    </table>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>	
