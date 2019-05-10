@@ -18,7 +18,8 @@
         </div>
         <div class="col-sm">
           <ul style="width: 100%;">
-            <li style="display: block;float: right;"><a class="inbar" href="/login" style="float: right;">Login</a></li>
+            <li style="display: block;float: right;"><a class="inbar" href="/login/index.php" style="float: right;">Login</a></li>
+            <li style="display: block;float: right;"><a class="inbar" href="/register/index.html" style="float: right;">Register</a></li>
           </ul>
         </div>  
       </div>

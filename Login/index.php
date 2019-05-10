@@ -15,7 +15,7 @@ if(isset($_POST["submit"]) && $_POST["submit"] === "LOGIN"){
     
       if($statement->fetch(PDO::FETCH_ASSOC) != FALSE) {
         $_SESSION["logged_in"] = true;
-        header("Location: geheimestartseite.php");
+        header("Location: /index.php");
       } else {
         $_SESSION["logged_in"] = false;
         echo "<p>Die Zugangsdaten sind falsch!<p/>";
