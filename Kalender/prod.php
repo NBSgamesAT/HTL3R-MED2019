@@ -50,6 +50,19 @@
       <td class="calender" style="color:#fff"><strong>So</strong></td>
     </tr>
     <?php
+
+    $db = new PDO("mysql:host=nbsgames.at;dbname=MyNextEvent", "BF", "bachschwellfamily");
+    $state = "SELECT YEAR(Datum) AS Year, MONTH(Datum) AS Month, DAY(Datum) AS Day FROM events;";
+    $execute = $db->prepare($state);
+    $execute->execute();
+
+    $days = array();
+    while (($result = $execute->fetch(PDO::FETCH_ASSOC)) != false){
+      if($result["Year"] == $cYear && $result["Month"] == $cMonth){
+        array_push($days, $result["Day"]);
+      }
+    }
+
     $timestamp = mktime(0,0,0,$cMonth,1,$cYear);
     $maxday = date("t",$timestamp);
     $thismonth = getdate ($timestamp);
@@ -72,6 +85,9 @@
         }
         else if($show && date("d", time()) == ($i - $startday + 1)){
           echo "<td class=\"today\">". ($i - $startday + 1) . "</td>";
+        }
+        else if(in_array(($i - $startday + 1), $days)){
+          echo "<td class=\"has-event\">". ($i - $startday + 1) . "</td>";
         }
         else echo "<td class=\"num\">". ($i - $startday + 1) . "</td>";
         if(($i % 7) == 6 ) echo "</tr>";

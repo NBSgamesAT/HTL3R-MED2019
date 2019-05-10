@@ -33,6 +33,13 @@ td.today {
   width: 35px;
 }
 
+td.has-event {
+  background-color: #00ff00;
+  border: 1px solid #000;
+  text-align: center;
+  width: 35px;
+}
+
 #navbar {
   position: fixed;
   background-color: #e3d7d7;
