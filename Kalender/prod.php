@@ -11,7 +11,7 @@
   <body>
     <?php
       $monthNames = Array("Jänner", "Februar", "März", "April", "Mai", "Juni", "Juli",
-      "August", "September", "Oktober", "November", "December");
+      "August", "September", "Oktober", "November", "Dezember");
 
       if (!isset($_REQUEST["month"])) $_REQUEST["month"] = date("n");
       if (!isset($_REQUEST["year"])) $_REQUEST["year"] = date("Y");
@@ -54,6 +54,10 @@
     $maxday = date("t",$timestamp);
     $thismonth = getdate ($timestamp);
     $startday = $thismonth['wday'] - 1;
+    if($startday == -1){
+      $startday = 6;
+    }
+    //echo $startday;
     $skipper = 0;
     $show = false;
     if($cMonth == date("m", time()) && $cYear == date("Y", time())){
@@ -72,12 +76,19 @@
         else echo "<td class=\"num\">". ($i - $startday + 1) . "</td>";
         if(($i % 7) == 6 ) echo "</tr>";
     }
-    $filler = 7 - ($maxday % 7 + $skipper);
+    $filler = ($maxday % 7 + $skipper);
+
+    if($filler > 7){
+      $filler = 14 - $filler;
+    }
+    else if ($filler != 0){
+      $filler = 7 - $filler;
+    }
     
     for ($i=0; $i<$filler; $i++) {
       echo "<td class=\"calender\"></td>";
       if($i == ($filler-1)){
-        echo "<tr>";
+        echo "</tr>";
       }
     }
     ?>
