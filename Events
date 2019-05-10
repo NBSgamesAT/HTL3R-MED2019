@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Nia ist.....</title>
+  </head>
+  <body>
+      <h1>Paintball Event</h1>
+      <p>Lehrer: Korper
+        <br/>
+         Datum: 20.06.2019
+         <br/>
+         Preis: 100€
+         <br/>
+         Kurzbeschreibung: Wir gehen Paintball spielen am 20.06.2019 alle unter 16 Jährigen brauchen die Erlaubnis ihrer Eltern.
+         <br/>
+         Halbtage: 2
+       </p>
+         <br/>
+         <br/>
+       <h1>Gaming Monday</h1>
+       <p>Lehrer: Nickel
+         <br/>
+         Datum: 24.06.2019
+         <br/>
+         Preis: Gratis
+         <br/>
+         Kurzbeschreibung: Bitte alle Schüler eigene Monitore und PCs und Konsolen mitnehmen und dann können wir durchzocken.
+         <br/>
+         Halbtage: 2
+      </p>
+        <br/>
+        <br/>
+      <h1>FIFA Turnier</h1>
+      <p>Lehrer: Fröhlich
+        <br/>
+        Datum: 25.06.2019
+        <br/>
+        Preis: Gratis
+        <br/>
+        Kurzbeschreibung: Bitte Konsolen und das Speil FIFA mitnehmen.
+        <br/>
+        Halbtage: 1
+     </p>
+       <br/>
+       <br/>
+    <h1>Basketball Event</h1>
+     <p>Lehrer: Horvath
+       <br/>
+       Datum: 24.06.2019 - 26.06.2019
+       <br/>
+       Preis: 66€
+       <br/>
+       Kurzbeschreibung: Man lernt Basketball mit 3 Trainern und am Ende gibt es ein Turnier.
+       <br/>
+       Halbtage: 6
+    </p>
+      <br/>
+      <br/>
+    <h1>Erste-Hilfe-Kurs</h1>
+     <p>Lehrer: Wagner
+       <br/>
+       Datum: 21.06.2019
+       <br/>
+       Preis: 23€
+       <br/>
+       Kurzbeschreibung: Der Erste-Hilfe-Kurs ist auch gültig fpr den Führerschein.
+       <br/>
+       Halbtage: 1
+    </p>
+      <br/>
+      <br/>
+  </body>
+</html>
