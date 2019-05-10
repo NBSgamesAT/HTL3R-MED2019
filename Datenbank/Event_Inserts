@@ -1,0 +1,9 @@
+INSERT INTO events(Titel,Datum,Beschreibung) VALUES ("Paintball Event","2019-06-20","Wir gehen Paintball spielen am 20.06.2019, alle unter 16 Jährigen brauchen die Erlaubnis ihrer Eltern.");
+
+INSERT INTO events(Titel,Datum,Beschreibung) VALUES ("Gaming Monday","2019-06-24","Bitte alle Schüler eigene Monitore und PCs und Konsolen mitnehmen und dann können wir durchzocken.");
+
+INSERT INTO events(Titel,Datum,Beschreibung) VALUES ("FIFA Turnier","2019-06-25","Bitte Konsolen und das Spiel FIFA mitnehmen.");
+
+INSERT INTO events(Titel,Datum,Beschreibung) VALUES ("Basketball Event","2019-06-24","Man lernt Basketball mit 3 Trainern und am Ende gibt es ein Turnier");
+
+INSERT INTO events(Titel,Datum,Beschreibung) VALUES ("Erste-Hilfe-Kurs","2019-06-21","Der Erste-Hilfe-Kurs ist auch gültig fpr den Führerschein.");
