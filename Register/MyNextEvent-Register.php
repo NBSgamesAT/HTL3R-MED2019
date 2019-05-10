@@ -17,7 +17,7 @@
                 
                 $user = $_POST["benutzername"];
                 $pw = $_POST["password"];
-                $geb = $_POST["datum"];
+                $geb = $_POST["bday"];
                 $geschlecht = $_POST["gender"];
                 $ort = $_POST["ort"];
                 
