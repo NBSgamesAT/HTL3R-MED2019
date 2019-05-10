@@ -16,27 +16,23 @@
 		<legend>Persönliche Daten</legend>
 	<form action='MyNextEvent-Register.php' method='POST'>
 
-			Vorname*: <input type="text" name="vorname" required/>
+			Benutzername*: <input type="text" name="benutzername" required>
 			</br>
 			</br>
-			Nachname*: <input type="text" name="nachname" required/>
-			</br>
-			</br>
-			Passwort*: <input type="password" name="password">
+			Passwort*: <input type="password" name="password" required>
 			</br>
 			</br>
 			Geschlecht*: <input type="radio" name="gender" value="1" checked>Männlich
-			<input type="radio" name="gender" value="2" required>Weiblich <input type="radio" name="gender" value="3" > Kampfhelikopter
+			<input type="radio" name="gender" value="2" required>Weiblich
 			</br>
 			</br>
-			Ort: <input type="text" name="ort" />
+			Ort: <input type="text" name="ort">
 			</br>
 			</br>
-
-			Geburtsdatum*: <input type="date" name="geburtsdatum" required/>
+            		Geburtsdatum*: <input type="date" name="geburtsdatum" required>
 			</br>
 			</br>
-			<p><mark>*Pflichtfelder, müssen ausgefüllt werden</mark></p>
+			<p><mark>[*]Pflichtfelder, müssen ausgefüllt werden</mark></p>
 			</br>
 			<input type="submit" name="reg" value="Registrieren">
 			</form>
