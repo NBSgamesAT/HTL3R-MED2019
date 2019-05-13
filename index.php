@@ -1,5 +1,12 @@
 <?php
+session_start();
 
+if(isset($_SESSION["logged_in"])){
+  $logged = $_SESSION["logged_in"];
+}
+else{
+  $logged = false;
+}
 ?>
 <!DOCTYPE html>
 <html lang="de" dir="ltr">
@@ -18,8 +25,18 @@
         </div>
         <div class="col-sm">
           <ul style="width: 100%;">
+            <?php
+              if(!$logged)
+              echo <<<html
             <li style="display: block;float: right;"><a class="inbar" href="/login/index.php" style="float: right;">Login</a></li>
             <li style="display: block;float: right;"><a class="inbar" href="/register/index.html" style="float: right;">Register</a></li>
+html;
+              else
+                echo <<<html
+            <li style="display: block;float: right;"><a class="inbar" href="/logout/logout.php" style="float: right;">Logout</a></li>
+html;
+            ?>
+            
           </ul>
         </div>  
       </div>

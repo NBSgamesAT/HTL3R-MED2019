@@ -1,4 +1,5 @@
 <?php
+session_start();
 $SHOW_ERROR = false;
 if(isset($_POST["submit"]) && $_POST["submit"] === "LOGIN"){
   if(isset($_POST["benutzername"]) && $_POST["benutzername"] != "" && isset($_POST["passwort"]) && $_POST["passwort"] != ""){
@@ -15,6 +16,7 @@ if(isset($_POST["submit"]) && $_POST["submit"] === "LOGIN"){
     
       if($statement->fetch(PDO::FETCH_ASSOC) != FALSE) {
         $_SESSION["logged_in"] = true;
+        $_SESSION["username"] = $benutzername;
         header("Location: /index.php");
       } else {
         $_SESSION["logged_in"] = false;
